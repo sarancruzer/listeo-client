@@ -7,22 +7,39 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { LoginComponent } from './component/login/login.component';
-import { DashboardTwoComponent } from './component/dashboard-two/dashboard-two.component';
 import { LoadScriptsService } from './_service/load-scripts.service';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { HeaderComponent } from './component/_shared/header/header.component';
-import { FooterComponent } from './component/_shared/footer/footer.component';
+import { FullLayoutComponent } from './component/_containers/full-layout/full-layout.component';
+import { SimpleLayoutComponent } from './component/_containers/simple-layout/simple-layout.component';
+
+import {
+  HeaderComponent,
+  FooterComponent,
+  SidebarComponent
+} from './component/_shared';
+import { LandingComponent } from './component/landing/landing.component';
+import { AddListingComponent } from './component/add-listing/add-listing.component';
+
+
+const APP_COMPONENTS = [
+  HeaderComponent,
+  FooterComponent,
+  SidebarComponent
+];
 
 @NgModule({
   declarations: [
     AppComponent,
+    ...APP_COMPONENTS,
     LoginComponent,
     DashboardComponent,
     SignupComponent,
     PageNotFoundComponent,
-    DashboardTwoComponent,
-    HeaderComponent,
-    FooterComponent
+    FullLayoutComponent,
+    SimpleLayoutComponent,
+    SidebarComponent,
+    LandingComponent,
+    AddListingComponent
   ],
   imports: [
     BrowserModule,
