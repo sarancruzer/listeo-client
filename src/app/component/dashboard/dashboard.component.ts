@@ -1,0 +1,17 @@
+import { LoadScriptsService } from './../../_service/load-scripts.service';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
+})
+export class DashboardComponent implements OnInit {
+
+  constructor(private _scriptService: LoadScriptsService) { }
+
+  ngOnInit() {
+   // this._scriptService.loadScripts();
+  }
+
+}
