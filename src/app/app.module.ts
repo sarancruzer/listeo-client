@@ -19,6 +19,14 @@ import {
 } from './component/_shared';
 import { LandingComponent } from './component/landing/landing.component';
 import { AddListingComponent } from './component/add-listing/add-listing.component';
+import { AdminHeaderComponent } from './component/_shared/admin-header/admin-header.component';
+import { MyListingComponent } from './component/my-listing/my-listing.component';
+import { CopyrightComponent } from './component/_shared/copyright/copyright.component';
+import { ReviewsComponent } from './component/reviews/reviews.component';
+import { MessagesComponent } from './component/messages/messages.component';
+import { BookmarksComponent } from './component/bookmarks/bookmarks.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { ListingListComponent } from './component/listing-list/listing-list.component';
 
 
 const APP_COMPONENTS = [
@@ -39,7 +47,15 @@ const APP_COMPONENTS = [
     SimpleLayoutComponent,
     SidebarComponent,
     LandingComponent,
-    AddListingComponent
+    AddListingComponent,
+    AdminHeaderComponent,
+    MyListingComponent,
+    CopyrightComponent,
+    ReviewsComponent,
+    MessagesComponent,
+    BookmarksComponent,
+    ProfileComponent,
+    ListingListComponent
   ],
   imports: [
     BrowserModule,

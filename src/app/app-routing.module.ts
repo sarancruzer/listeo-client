@@ -7,6 +7,12 @@ import { SimpleLayoutComponent, FullLayoutComponent } from './component/_contain
 import { SignupComponent } from './component/signup/signup.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { AddListingComponent } from './component/add-listing/add-listing.component';
+import { MyListingComponent } from './component/my-listing/my-listing.component';
+import { ReviewsComponent } from './component/reviews/reviews.component';
+import { MessagesComponent } from './component/messages/messages.component';
+import { BookmarksComponent } from './component/bookmarks/bookmarks.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { ListingListComponent } from './component/listing-list/listing-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -15,12 +21,18 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
       { path: 'landing', component: LandingComponent },
+      { path: 'listingList', component: ListingListComponent },
     ]
   },
   {path: '', component: FullLayoutComponent,
   children: [
     {path: 'dashboard', component: DashboardComponent},
     {path: 'addListing', component: AddListingComponent},
+    {path: 'myListing', component: MyListingComponent},
+    {path: 'reviews', component: ReviewsComponent},
+    {path: 'messages', component: MessagesComponent},
+    {path: 'bookmarks', component: BookmarksComponent},
+    {path: 'profile', component: ProfileComponent},
 
 
   ]},

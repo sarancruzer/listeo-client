@@ -9,26 +9,26 @@
 		<div class="dashboard-nav-inner">
 
 			<ul data-submenu-title="Main">
-				<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
-				<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages <span class="nav-tag messages">2</span></a></li>
+				<li [ngClass]="{active: activeRoute('dashboard')}" ><a [routerLink]="['/dashboard']"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
+				<li [ngClass]="{active: activeRoute('messages')}" ><a  [routerLink]="['/messages']" ><i class="sl sl-icon-envelope-open"></i> Messages <span class="nav-tag messages">2</span></a></li>
 			</ul>
 
 			<ul data-submenu-title="Listings">
 				<li><a><i class="sl sl-icon-layers"></i> My Listings</a>
 					<ul>
-						<li><a href="dashboard-my-listings.html">Active <span class="nav-tag green">6</span></a></li>
-						<li><a href="dashboard-my-listings.html">Pending <span class="nav-tag yellow">1</span></a></li>
-						<li><a href="dashboard-my-listings.html">Expired <span class="nav-tag red">2</span></a></li>
+						<li [ngClass]="{active: activeRoute('myListing')}" ><a [routerLink]="['/myListing']" >Active <span class="nav-tag green">6</span></a></li>
+						<li><a  [routerLink]="['/myListing']" >Pending <span class="nav-tag yellow">1</span></a></li>
+						<li><a  [routerLink]="['/myListing']" >Expired <span class="nav-tag red">2</span></a></li>
 					</ul>
 				</li>
-				<li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li>
-				<li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> Bookmarks</a></li>
-				<li class="active"><a href="dashboard-add-listing.html"><i class="sl sl-icon-plus"></i> Add Listing</a></li>
+				<li  [ngClass]="{active: activeRoute('reviews')}" ><a [routerLink]="['/reviews']"><i class="sl sl-icon-star"></i> Reviews</a></li>
+				<li [ngClass]="{active: activeRoute('bookmarks')}"><a [routerLink]="['/bookmarks']" ><i class="sl sl-icon-heart"></i> Bookmarks</a></li>
+				<li [ngClass]="{active: activeRoute('addListing')}"><a [routerLink]="['/addListing']"><i class="sl sl-icon-plus"></i> Add Listing</a></li>
 			</ul>
 
 			<ul data-submenu-title="Account">
-				<li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
-				<li><a href="index.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+				<li [ngClass]="{active: activeRoute('profile')}"><a  [routerLink]="['/profile']"><i class="sl sl-icon-user"></i> My Profile</a></li>
+				<li><a  [routerLink]="['/landing']" ><i class="sl sl-icon-power"></i> Logout</a></li>
 			</ul>
 
 		</div>
